@@ -1,0 +1,27 @@
+h1{
+    color: darkgreen;
+    font-family: georgia;
+    text-align: center;
+}
+
+h2{
+    font-family: georgia;
+    text-align: center;
+}
+p{
+    line-height: 25px;
+}
+img{
+    float: left;
+    margin: 30px;
+    height: 250px;
+}
+.text{
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
