@@ -1,0 +1,115 @@
+/* *{
+    position: relative;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+}
+#header{
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 70px;
+    height: 100px;
+    margin: 20px;
+}
+img{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+}
+
+#baddies{
+    position: relative;
+    margin: auto;
+    background-color: #4285F4;
+    height: 90vh;
+    width: 80vw;
+    /* display: flex; */
+    /* box-sizing: border-box; */
+/* }
+#goombPic{
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    box-sizing: border-box; */
+    /* border: 3px solid blue;
+    padding: 20px; */
+/* }
+#GoombName{
+    position: absolute;
+    font-size: 20px;
+    left: 30px;
+    top: 15px;
+}
+#BobName{
+    position: absolute;
+    font-size: 20px;
+    left: 375px;
+    top: 15px;
+}
+#bobPic{
+    position: absolute;
+    left: 400px;
+    top: 50px;
+}
+#cheepPic{
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+#CheepName{
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    top: 15px;
+}
+#totalcoins{
+    position: absolute;
+    top: 300px;
+}
+span.GoombName{
+    line-height: 2;
+}
+#footerInfo.{
+    font-family: arial; 
+} */ 
+
+/* *{
+    font-family: 'Monoton', cursive;  
+} */
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: inherit;
+    height: 1000px;
+    background-color: #4285F4;
+
+}
+#header{
+    font-family: 'Monoton', cursive; 
+    align-content: center;
+    height: 400px;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+span{
+    display:flex;
+    justify-content: inherit;
+}
+#baddies{
+    font-family: 'Monoton', cursive; 
+    display: flex;
+    justify-content: center;
+}
+div{
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+/* #footerInfo{
+    display: flex;
+    align-self: baseline;
+} */

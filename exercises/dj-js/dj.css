@@ -1,0 +1,8 @@
+.box{
+    box-sizing: border-box;
+    position: relative;
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    margin: 20px;
+}

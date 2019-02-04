@@ -1,0 +1,22 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff9999;
+}
+#header{
+    height: 100px;
+    width: 100px;
+}
+.add{
+    color: aquamarine;
+}
+.SUBTRACT{
+
+}
+.mulitply{
+    background-color: lightcoral;
+    width: 100px;
+    height: 100px;
+}
+#addNum{
+    background-color: aquamarine;
+}
