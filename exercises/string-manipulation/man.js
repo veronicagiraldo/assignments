@@ -11,7 +11,17 @@ var age = ask.question(`I am 65 years old. What is your age? `);
 console.log(`Cool, so far, I know your name is ${firstName} ${lastName} and you're ${age} years old.`);
 var background = ask.question(`Give me a short background about yourself and I'll repeat back what I remember:`);
 console.log(`${background}`);
-var numCharacters = ask.question(`The information you gave me is ${background.length} characters long.\n This was the last half: \n`);
-// var lastHalf = background.length/ 2.splice() splice 
-console.log(`${lastHalf}`);
-var numRange = ask.question(`would you like me to start from somewhere else in your info? Choose a number in the range[0 - ${numRange}]:')
+var numCharacters = ask.question(`The information you gave me is ${background.length} characters long.\n This was the last half: `);
+console.log(`${numCharacters}`);
+
+var lastHalf = background.slice(background.length/2)
+console.log(lastHalf);
+var text = ask.question(`would you like me to start from somewhere else in your info? Choose a number in the range[0 - ${background.length}]?`);
+console.log(text.splice(background.length));
+
+
+// var text = ask.question(`(background.length/2)`)
+// var lastHalf =background.splice(parseInt(background.length)/2)
+// console.log(`${lastHalf}`)
+// var numRange = ask.question(`would you like me to start from somewhere else in your info? Choose a number in the range[0 - ${numRange}]:')
+// `would you like me to start from somewhere else in your info? Choose a number in the range[0 - ${background.length}]?`);
