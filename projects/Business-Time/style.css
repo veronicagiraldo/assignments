@@ -1,0 +1,42 @@
+*{
+    font-family: 'Lobster', cursive;
+}
+html body{
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    font-size:  18px;
+    height: 80px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #FFDB47;
+    border-radius: 10px;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 50px; */
+    background-color: #FFDB47;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.nav a{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
+}
+.nav a:hover {
+  background-color: #F0B014;
+  color: black;
+  border-radius: 10px;
+}
+img{
+    height: 30%;
+    width: 50%;
+}
