@@ -7,3 +7,21 @@
 // CSS Box model (margin, padding, border, width/height
 // Responsive (Media queries, Flexbox, Bootstrap Grid, CSS Grids, or any combination of the above)
 // Multiple HTML pages, linked
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+// function myFunction() {
+//   var x = document.getElementById("myTopnav");
+//   if (x.className === "topnav") {
+//     x.className += " responsive";
+//   } else {
+//     x.className = "topnav";
+//   }
+// }
