@@ -73,26 +73,12 @@ p{
 .topnav .icon{
     display: none;
 }
-/* .nav a{
+.frame {
     display: flex;
     justify-content: center;
-    flex: 1;
-    color: white;
-    font-family: 'Lobster', cursive;
+    /* height: 80%; */
+    margin: 30px;
 }
-.nav a:hover {
-  background-color: #ABEBC6;
-  color: #EAFAF1;
-  border-radius: 10px; */
-/* } */
-/* .nav{
-    overflow:hidden;
-    background-color: #27AE60;
-} */
-/* img{
-    height: 100%;
-    display: flex;
-    width: 50%; */
 span{
     color: #27AE60;
     letter-spacing: 1px;
@@ -137,7 +123,7 @@ span{
     /* height: 50px; */
     background-color:#27AE60;
     padding: 5px;
-    margin: 10px;
+    /* margin: 10px; */
     border-radius: 10px;
 }
 .footer a:hover{
@@ -150,7 +136,7 @@ span{
     justify-content: center;
     color: white;
     font-family: 'Lobster', cursive;
-    font-size: 10px;
+    font-size: 17px;
 }
 
 
