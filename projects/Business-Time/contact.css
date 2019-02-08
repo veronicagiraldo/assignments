@@ -20,6 +20,12 @@ h2{
     font-size: 40px;
     font-style: bold;
 }
+/* p{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    font-family:'Montserrat', sans-serif; */
+
 .topnav{
     overflow: hidden;
     background-color:#27AE60;
@@ -59,13 +65,17 @@ div.background {
     background-color: #ffffff;
     border: 3px solid black;
     opacity: 0.8;
+    /* width: 80%; */
     /* position: relative; */
   }
   
   div.transbox p {
     font-weight: bold;
     color: #000000;
-    font-size: 30px;
+    /* width: 80%; */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-family:'Montserrat', sans-serif;
     /* position: absolute; */
@@ -78,6 +88,7 @@ div.background {
     padding: 5px;
     /* margin: 10px; */
     border-radius: 10px;
+    letter-spacing: 1.5px;
 }
 .footer a:hover{
     background-color: #ABEBC6;
@@ -91,9 +102,9 @@ div.background {
     font-family: 'Lobster', cursive;
     font-size: 17px;
 }
+    
 
-
-@media(min-width: 800px){
+@media screen and (min-width: 800px){
     body{
        background-position: 42% 6%;
     }

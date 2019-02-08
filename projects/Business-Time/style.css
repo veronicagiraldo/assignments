@@ -84,13 +84,6 @@ span{
     letter-spacing: 1px;
     font-family: 'Lobster', cursive;
 }
-/* p{
-    font-family:'Montserrat', sans-serif;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-} */
-
 .images{
     display: flex;
     float: left;
@@ -125,6 +118,7 @@ span{
     padding: 5px;
     /* margin: 10px; */
     border-radius: 10px;
+    letter-spacing: 1.5px;
 }
 .footer a:hover{
     background-color: #ABEBC6;

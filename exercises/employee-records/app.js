@@ -9,10 +9,13 @@ function Employees(name, jobTitle, salary, status= "Full Time"){
 }
 
 var employees = [];
+// var newEmployeeFour = Employees
 
 var newEmployee = new Employees("Veronica", "Assistant", "$3,000/hour", "part time");
-var newEmployeeTwo = new Employees("Emily", "Lawyer", "$100,000/hour", "Contract");
-var newEmployeeThree = new Employees("Amy", "Teacher", "$10/hour", "Contract");
+// var newEmployeeTwo = new Employees("Emily", "Lawyer", "$100,000/hour", "Contract");
+// var newEmployeeThree = new Employees("Amy", "Teacher", "$10/hour", "Contract");
 newEmployee.printEmployeeForm();
-newEmployeeTwo.printEmployeeForm();
-newEmployeeThree.printEmployeeForm();
+// newEmployeeTwo.printEmployeeForm();
+// newEmployeeThree.printEmployeeForm();
+// console.log(this.printEmployeeForm);
+// console.log(employees.printEmployeeForm());
