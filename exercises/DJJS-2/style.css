@@ -1,0 +1,101 @@
+body{
+    background-image: url("https://ih1.redbubble.net/image.367930543.9063/flat,550x550,075,f.u1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+section{
+    margin: 40px;
+    text-align: center;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+    margin-bottom: 20px;
+    transition-property: top, left;
+    transition-duration: 2s, 1s;
+    transition-delay: .6s;  
+    /* transition: all .2s ease-in-out; */
+}
+.box:hover{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: pink;
+}
+.boxTwo{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+.boxTwo:hover{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: cyan;
+}
+.boxThree{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+}
+.boxThree:hover{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color:  greenyellow;
+}
+.boxFour{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+.boxFour:hover{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: rgb(110, 243, 21);
+}
+.boxFive{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+.boxFive:hover{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: orangered;
+}
+.boxSix{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+    transition: all .2s ease-in-out;
+}
+.boxSix:hover{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: hotpink;
+}

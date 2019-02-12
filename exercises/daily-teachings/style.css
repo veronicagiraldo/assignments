@@ -1,0 +1,36 @@
+
+
+.box{
+    background-color: blue;
+    /* position: relative; */
+    position: absolute;
+    height: 100px;
+    width: 50%;
+    /* top: 50px; */
+    /* bottom: 50px; */
+    /* left: 50px; */
+    /* right: 100px;  */
+
+}
+.little{
+    background-color: red;
+    /* position: absolute; */
+    height: 60px;
+    width: 50px;
+    right: 500px;
+}
+
+
+
+/* 
+.Fixed{
+    background-color: purple;
+    position: fixed;
+    height: 90px;
+    width: 50%;
+}
+.blackBox{
+    background-color: black;
+    height: 100px;
+    width: 50%;
+} */

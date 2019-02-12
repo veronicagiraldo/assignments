@@ -1,0 +1,76 @@
+{   
+    "appetizers": [{
+        "item":"hummus and veggies",
+        "ingredients":["hummus", "carrots", "celery"], 
+        "description": "homemade hummus with fresh cut carrots and celery"
+        },
+        {
+        "item": "apples and peanut butter", 
+        "ingredients": ["green apples", "peanut butter"],
+        "description": "fresh apples and peanut butter"
+        },
+        {
+        "item": "cheese and crackers",
+        "ingredients": ["colby jack cheese", "pepper jack cheese", "ritz crackers"],
+        "descripition": "assortment of cheese with ritz crackers"
+        }],
+    
+    
+    "cold sandwiches":[{
+        "item": "peanut butter and jelly",
+        "ingredients": ["wheat bread", "peanut butter", "grape jelly"],
+        "descripition": "on a toast bread with peanut butter and jelly"
+        },
+        { 
+        "item": "turkey and cranberry",
+        "ingredients": ["turkey", "white bread", "cranberry sauce"],
+        "descripition": "a sandwich with turkey and cranberry sauce"
+        },
+        {
+        "item": "italian cut sandwich",
+        "ingredients": ["white bread", "proscutto", "salame", "pepperoni", "mozzorrolla cheese"],
+        "descripition":"cold sandwich with italian meat"
+        }],
+    
+    
+    "Hot sandwiches":[{
+        "item": "tuna melt",
+        "ingredients": ["tuna fish", "mayo", "wheat bread", "cheese"],
+        "descripition": "melted sandwich with tuna and cheese"
+    },
+    {
+        "item": "meatball sandwich",
+        "ingredients": ["meatballs", "red sauce", "cheese", "italian sub"],
+        "descripition": "Italian sub with marina and meatballs with cheese"
+    }],
+
+    
+    "desserts": [{
+        "item": "brownie and ice cream",
+        "ingredients":["chocolate brownie", "vanilla ice cream"],
+        "descripition": "warm brownie with ice cream on top"
+    },
+    {
+        "item": "chocolate chip cookie",
+        "ingredients": ["chocolate chip cookie"],
+        "descripition": "chocolate chip cookie"
+    }],
+    
+    
+    "Drinks": [{
+        "item": "coffee", 
+        "ingredients": ["Dark roast coffee"],
+        "descripition": "Dark roast coffee with choice of almond milk or creamer"
+    },
+    {
+        "item": "La Croix", 
+        "ingredients": ["Lime", "grapefruit", "peach"],
+        "descripition": "Choice of flavored sparkling water,lime, grapefruit, or peach"
+    },
+    {
+        "item": "soda", 
+        "ingredients": ["pepsi", "coke", "sprite"],
+        "descripition": "16 oz soda of choice"
+    }]
+   
+    }
