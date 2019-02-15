@@ -1,0 +1,20 @@
+.todo{
+    background-color: beige;
+}
+#todo-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.strikened{
+    text-decoration: line-through;
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+}
+form{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}

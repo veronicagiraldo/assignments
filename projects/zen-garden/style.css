@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.header{
+    height: 100px;
+}
+
+@media (min-width: 1130px){
+    .grid{
+        grid-template-columns: 2fr 1fr;
+    }
+    .left{
+        grid-column: 1/2;
+    }
+    .right{
+        grid-column: 2/3;
+    }
+    .authors{
+        grid-row: 2/3;
+    }
+    .links{
+        grid-row: 3/4;
+    }
+}
