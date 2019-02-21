@@ -12,6 +12,7 @@ var newArr = doubleNumbers.map(function(doubleNumber){
 })
 console.log(newArr);
 
+// const newArr = doubleNumbers.map(doubleNumber => doubleNumber*2 ) ES6
 // 2) Take an array of numbers and make them strings
 function stringItUp(arr){
 }

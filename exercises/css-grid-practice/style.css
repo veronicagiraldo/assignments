@@ -1,7 +1,7 @@
 div{
     border-radius: 10px;
 }
-.container{
+/* .container{
     display: grid;
     grid-gap: 20px; 
     grid-template-columns: 1fr 1fr;
@@ -80,4 +80,58 @@ div{
     background-color: #F4D03F;
     grid-row-start: 5;
     grid-column: 4;
+} */
+
+
+.questionThree{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 50px 50px 200px 50px 50px;
+    /* grid-template-areas: */
+    width: 100%;
+    height: 250px;
 }
+.h{
+    background-color: #ABB2B9;
+}
+.s{
+    background-color: #ABB2B9;
+}
+.c{
+    background-color: #566573; 
+}
+.s2{
+    background-color: #ABB2B9;
+}
+.f{
+    background-color: #ABB2B9;
+}
+@media (min-width: 600px){
+    .questionThree{
+        grid-template-areas: 
+        "h "
+        "s"
+        "c"
+        "s2"
+        "f";
+    }
+}
+@media (min-width: 768px){
+    .questionThree{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-rows: 50px 200px 50px 50px;
+        grid-template-areas: 
+        "h"
+        "s" "c"
+        "s2"
+        "f";
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}  */
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {...}  */
+/* Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {...}  */
