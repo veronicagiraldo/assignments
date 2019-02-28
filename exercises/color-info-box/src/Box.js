@@ -2,17 +2,17 @@ import React from "react";
 
 const Box =(props) => {
    const styles={
-       backgroundColor: "pink",
-       color: "yellow", 
-       height: "100px",
-       width: "100px"
+       backgroundColor: props.backgroundColor,
+       color: props.color,
+    //    height: "200px",
+    //    width: "200px"
 
    }
     return (
-        <div className="box">
-            <p style={styles}> Title </p>
-            <p style={props.backgroundColor}>Subtitle</p>
-            <p>Information</p>
+        <div style={styles}>
+            <h1 >{props.title}</h1>
+            <h2>{props.subtitle}</h2>
+            <p>{props.info}</p>
         </div>
     )
 }

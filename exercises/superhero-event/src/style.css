@@ -1,0 +1,9 @@
+.superHero-div {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: #66FF99;
+    font-size: 2em;
+}

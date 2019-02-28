@@ -1,0 +1,27 @@
+{ "superHeros" : [
+            {
+                "name": "Mario",
+                "images": "https://mario.nintendo.com/assets/img/home/intro/mario-pose3.png",
+                "catchPhrase": "I am Mario!"
+            },
+            {
+                "name": "Iron Man",
+                "images": "https://cdn.britannica.com/s:700x450/49/182849-004-B0B1EA73.jpg",
+                "catchPhrase": "No one likes a know-it-all computer"
+            },
+            {
+                "name": "Captain America",
+                "images": "https://cdn.britannica.com/s:700x450/30/182830-004-61C7794A.jpg",
+                "catchPhrase": "I'm loyal to nothing except the dream." 
+             },
+            {
+                "name": "Spider-Man",
+                "images": "https://cdn.britannica.com/s:700x450/54/93454-004-5460E2D6.jpg",
+                "catchPhrase": "Your friendly neighborhood Spider-Man."  
+            }
+    ]
+    
+}
+
+
+ 

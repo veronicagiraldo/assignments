@@ -1,0 +1,15 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-style: solid;
+}
+.badgeInfo{
+    border-style: solid;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+h2{
+    background-color: #9E9E9E;
+    color: white;
+   
+}

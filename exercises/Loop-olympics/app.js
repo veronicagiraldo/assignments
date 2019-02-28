@@ -55,18 +55,18 @@ var peopleArray = [
     }
   ]
 // var arrPeople = peopleArray.name;
-var name = peopleArray[i].name;
-for(var i= 0; i < peopleArray.length; i++){
-     console.log(peopleArray[i].name)
-    //  console.log(peopleArray[i])
-    //  arrPeople.push(i);
-}
-console.log(namePeopleArray[i].name);
-// for(var i=0; i< 5; i++){
-//     peopleArray[i].name
+// var name = peopleArray[i].name;
+// for(var i= 0; i < peopleArray.length; i++){
+//      console.log(peopleArray[i].name)
+//     //  console.log(peopleArray[i])
+//     //  arrPeople.push(i);
 // }
-// console.log(peopleArray[i].name);
-// console.log(peopleArray.push(name));
+// console.log(namePeopleArray[i].name);
+for(var i=0; i< 5; i++){
+    peopleArray[i].name
+}
+console.log(peopleArray[i].name);
+console.log(peopleArray.push(name));
 // Write a loop that pushes the names into a names array, and the occupations into an occupations array.
 
 

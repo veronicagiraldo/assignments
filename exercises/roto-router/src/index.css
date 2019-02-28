@@ -1,0 +1,18 @@
+.nav{
+    height: 200px;
+    background-color: #FF33FF;
+}
+
+.footer{
+    height: 200px;
+    background-color: #00FF66;
+}
+
+.main{
+    background-color: #FF9966;
+    height: 500px;
+}
+.about, .services, .home{
+    background-color: #FF9966;
+    height: 500px;
+}

@@ -1,0 +1,13 @@
+*{
+    font-family: "Lora", "Times New Roman", serif;
+}
+.nav{
+    background-color: "yellow";
+}
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 530px;
+   
+}
