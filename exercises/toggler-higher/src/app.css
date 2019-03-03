@@ -1,0 +1,27 @@
+
+
+.unstar{
+    visibility: hidden;
+}
+.star{
+    visibility: visible;
+    border-style: solid;
+}
+.card{
+    height: 300px;
+    border-style: solid;
+}
+.menu1{
+    border-style: solid;
+    height: 200px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.button{
+    width: 240px;
+    height: 60px;
+}

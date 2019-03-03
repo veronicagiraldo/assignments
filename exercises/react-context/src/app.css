@@ -1,0 +1,20 @@
+.footer{
+    background-color: #FB8C00; 
+    height: 200px;
+    font-size: 40px;
+}
+
+
+.about1, .services, .contact {
+    background-color: #FFB74D;
+    height: 200px;
+}
+
+.card{
+    background-color: #7986CB;
+    height: 300px;
+}
+.on{
+    height: 200px;
+    background-color: aqua;
+}
