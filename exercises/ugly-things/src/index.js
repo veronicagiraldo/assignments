@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDom from 'react';
-import App from './App';
-import './app.css';
+import ReactDOM from 'react-dom';
+import Header from './Header';
+// import ThemeProvider from './ThemeProvider'
 export const {Consumer, Provider} = React.createContext()
 
+
 ReactDOM.render(
-    <Provider value={{theme: "dark"}}>
-      <App />
-    </Provider>,
-    document.getElementById("root"))
+    <Provider>
+    <Header />
+    </Provider>, 
+    document.getElementById("root")
+    )
 
