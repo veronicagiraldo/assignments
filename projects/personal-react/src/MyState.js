@@ -12,7 +12,7 @@ class MyState extends React.Component{
     }
     // GET
     getQuestion = () => {
-        axios.get('https://opentdb.com/api.php?amount=10').then(res => {
+        axios.get('https://opentdb.com/api.php?amount=1').then(res => {
             this.setState({
                 trivia: res.data.results
             })
