@@ -1,5 +1,6 @@
 import React from 'react';
-import{withMy} from './MyState';
+import {withMy} from './MyState';
+import Answer from './Answer';
 
 class TriviaQ extends React.Component{
     constructor(props){
@@ -9,46 +10,30 @@ class TriviaQ extends React.Component{
             difficulty: "",
             question: "",
             type: "",
-            correctAnswer: "",
-            incorrectAnswer: ""
-        }
 
+        }
     }
     componentDidMount(){
-        console.log(this.props.getQuestion)
         this.props.getQuestion();
     }
-  
-
     render(){
-     
+        // console.log(this.props)
         const mappedTrivia = this.props.trivia.map((trivia, i) => {
-            console.log(this.props.trivia)
-            return <div>
-                <h1>{trivia.question}</h1>
-                {/* <h2>Category:{trivia.category}</h2> */}
-                {/* <h4>Difficult:{trivia.difficulty}</h4> */}
-                <select>
-                   <h4>{trivia.correct_answer} {trivia.incorrect_answers}</h4>                 
-                </select>
-             
-               
-            </div>
+            // console.log(this.props.trivia[0].incorrect_answers)
+            return(
+                <div key= {i}>
+                <h1> {trivia.question}  </h1>  
+             </div>
+            )
         })
         return(
-            // <label>
-            //     <input  type="radio"
-            //             name=""
-            //             value=""
-            //             checked=""
+            <div className="main">
+                <div className="container">
+                    {mappedTrivia}
+                    <Answer />
 
-            //          />
-            // </label>
-            <div>
-                   
-           {/* <h3>{this.state.category}</h3> */}
-           {mappedTrivia}
-           </div>
+                </div>
+             </div>
         )
     }
 }

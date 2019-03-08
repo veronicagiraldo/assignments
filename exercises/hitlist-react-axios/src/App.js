@@ -14,9 +14,6 @@ class App extends Component {
             }
             
         }
- 
-
-
     // GET- eventlistener/ place where HTTP requests
 
     async componentDidMount(){
@@ -27,10 +24,6 @@ class App extends Component {
             })
               
         }
-    
-      
-    
-
     render(){
         const mappedTodo = this.state.todos.map((todo, i) => {
             return(

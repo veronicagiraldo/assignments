@@ -1,0 +1,31 @@
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2017/03/02/09/26/question-mark-2110767_960_720.jpg");
+    background-repeat: no-repeat;
+
+    /* background-position: center; */
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+}
+h3{
+    font-size: 40px;
+}
+a:hover {
+    color: hotpink;
+}
+/* a:visited {
+    color: #DC143C;
+} */
+.link{
+    font-size: 30px;
+    color: #DC143C;
+}
+.aboutInfo{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@media (max-width: 600px) {
+    body {
+       background-size: contain;
+    }
+}
