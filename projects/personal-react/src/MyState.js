@@ -10,17 +10,19 @@ class MyState extends React.Component{
         this.state = {
             trivia: [], 
             answers:[],
-            incorrectAnswers: []
+            incorrectAnswers: [],
+            isRight: false,
+            youSuck: false,
         }
     }
     // GET
     getQuestion = () => {
         axios.get('https://opentdb.com/api.php?amount=1').then(res => {
-            console.log(res.data.results[0].correct_answers)
+            // console.log(res.data.results[0].correct_answers)
             const shuffled = this.shuffle([...res.data.results[0].incorrect_answers, res.data.results[0].correct_answer])
             this.setState({
                 trivia: res.data.results,
-                // answers: res.data.results[0].correct_answer,
+                answers: res.data.results[0].correct_answer,
                 incorrectAnswers: shuffled
             })
             // console.log(answers)
@@ -36,20 +38,47 @@ class MyState extends React.Component{
         }
         return newArr
     }
-    // onClick = (e) =>{
-    //     if(onClick === this.state.answers){
-    //         return "you're Right!!"
-    //     }else{
-    //         return "you suck!"
-    //     }
-    // }
+    clicked = (chosen) =>{
+        console.log(this.state.isRight)
+        if(chosen === this.state.answers){
+           this.setState({
+               isRight: true
+           }, () => {
+                setTimeout(()=>{
+                    window.location.reload();
+                }, 2000)
+           })
+        }else{
+            this.setState({
+                youSuck: true
+            })
+            setTimeout(()=>{
+                this.setState({youSuck: false})
+            }, 1000)
+    
+        }
+    }
+
+    // style.css= .app__settings {
+//   max-width: 550px;
+//   margin: 0 auto;
+// }
+
+// .app__confetti {
+//   flex: 1;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+
     render(){
         // console.log(this.state.answers)
         // console.log(this.state.incorrectAnswers)
         return(
             <Provider value={{
                 getQuestion: this.getQuestion,
-                onClick: this.onClick,
+                clicked: this.clicked,
                 ...this.state
 
             }}>

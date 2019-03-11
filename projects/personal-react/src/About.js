@@ -3,7 +3,8 @@ import React from 'react';
 
 const About = () => {
     const styles={
-        fontSize: "50px"
+        fontSize: "50px",
+        fontFamily: 'Luckiest Guy, cursive',
     }
     return(
         <div className="aboutInfo">

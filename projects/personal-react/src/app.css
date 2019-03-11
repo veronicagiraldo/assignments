@@ -9,6 +9,19 @@ body{
 h3{
     font-size: 40px;
 }
+.confetti {
+    position: relative;
+    left: 50%;
+    top: 200px;
+}
+.wrong {
+    position: absolute;
+    top: 0px;
+    left: 30%;
+    font-size: 60px;
+    background: #4CAF50;
+    padding: 96px;
+}
 a:hover {
     color: hotpink;
 }
@@ -20,12 +33,76 @@ a:hover {
     color: #DC143C;
 }
 .aboutInfo{
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Inconsolata', monospace; */
+}
+.aboutInfo{
+    background-color: white;
+    opacity: .8;
+    font-family: 'Galindo', cursive;
+}
+.HomePage{
+    font-family: 'Galindo', cursive;
+    background-color: white;
+    opacity: .8;  
 }
 
+.main{
+    /* font-family: 'Inconsolata', monospace; */
 
-@media (max-width: 600px) {
+}
+.container{
+    background-color: #F4F6F7;
+     opacity: .8;
+    font-family:'Sniglet', cursive;
+}
+
+@media (min-width: 768px){
+    .confetti {
+        position: relative;
+        left: 50%;
+        top: 100px;
+    }
+    .wrong {
+        position: absolute;
+        top: 78px;
+        left: 250px;
+        font-size: 50px;
+        background: #4CAF50;
+        padding: 96px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
     body {
        background-size: contain;
+    }
+    .confetti {
+        position: relative;
+        left: 50%;
+        top: 100px;
+    }
+    .wrong {
+        position: absolute;
+        top: 80px;
+        left: 100px;
+        font-size: 50px;
+        background: #4CAF50;
+        padding: 96px;
+    }
+  
+}
+@media(max-width: 375px){
+    .confetti {
+        position: relative;
+        left: 50%;
+        top: 100px;
+    }
+    .wrong {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        font-size: 60px;
+        background: #4CAF50;
+        padding: 96px;
     }
 }
