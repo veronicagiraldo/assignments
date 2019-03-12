@@ -1,5 +1,6 @@
 import React from 'react';
 import {withThings} from './Things'
+
    
    class Form extends React.Component {
        constructor(){
@@ -11,12 +12,12 @@ import {withThings} from './Things'
            }
        }
 
-        // componentDidMount(){
-        //  if(this.props.type === 'edit'){
-        //     let {title, description} = this.props.ugly
-        //     this.setState({title, description})
-        //  }
-        // }
+        componentDidMount(){
+         if(this.props.type === 'edit'){
+            let {title, description} = this.props.ugly
+            this.setState({title, description})
+        }
+        }
 
        handleChange = e => {
             this.setState({[e.target.name]: e.target.value})

@@ -11,6 +11,7 @@ class Why extends React.Component{
     }
 
     toggle = () =>{
+        console.log("why!")
         this.setState(prevState =>({
             toggled: !prevState.toggled
         }))
@@ -24,7 +25,7 @@ class Why extends React.Component{
                     <h2>{ugly.title}</h2>
                     <p>{ugly.description}</p>
                     <button onClick={() => deleteUgly(ugly._id)}>Delete</button>
-                    <button onClick={this.toggle}>Edit</button>
+                    <button onClick={this.props.toggle}>Edit</button>
                     </div>
                 :
                 <Form button="save changes" type="edit"/>
