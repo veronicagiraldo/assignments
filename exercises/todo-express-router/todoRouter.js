@@ -9,6 +9,16 @@ todoRouter.route('/')
             // console.log("get todo")
             response.send(data)
         })
+// GET Mongoose
+    // .get((req, res) => {
+    //     Todo.find((err, todo) => {
+    //       if(err) {
+    //         return res.status(500).send(err)
+    //       } else {
+    //         return res.status(200).send(todo)
+    //       }
+    //     })
+    //   })
 // POST
         .post((request, response) => {
             // console.log("I am a new post")

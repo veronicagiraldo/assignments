@@ -3,7 +3,7 @@ import axios from 'axios';
 const {Provider, Consumer} = React.createContext()
 
 class Things extends React.Component{
-    constructor(){
+    constructor(){ 
         super()
         this.state = {
             ugly: []
@@ -29,8 +29,7 @@ class Things extends React.Component{
         }
          //  PUT
          editUgly = (id, updatedUgly) => {
-             axios.put(`https://api.vschool.io/uglyveronica/todo/${id}`).then(res => {
-               
+             axios.put(`https://api.vschool.io/uglyveronica/todo/${id}`).then(res => { 
                  this.setState(prevState =>({
                      ugly: prevState.ugly.map(ugly => ugly._id === id ? ugly = updatedUgly : ugly)
                  }))
@@ -58,11 +57,9 @@ class Things extends React.Component{
             </Provider>
         );
         }
-    
 }   
 
 export default Things
-
 export function withThings (C) {
         return props => <Consumer>
                         {value => <C {...value}{...props} />}

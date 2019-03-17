@@ -12,7 +12,7 @@ class MyState extends React.Component{
             answers:[],
             incorrectAnswers: [],
             isRight: false,
-            youSuck: false,
+            youSuck: false,  
         }
     }
     // GET

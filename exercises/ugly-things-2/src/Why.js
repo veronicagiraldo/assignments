@@ -12,7 +12,7 @@ class Why extends React.Component{
 
     toggle = () =>{
         console.log("why!")
-        this.setState(prevState` =>({
+        this.setState(prevState =>({
             toggled: !prevState.toggled
         }))
     }
