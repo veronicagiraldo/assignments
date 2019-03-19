@@ -6,7 +6,7 @@ class UglyDisplay extends React.Component{
     componentDidMount(){
         this.props.getUgly()
     }
-
+ 
     render() {
          const mappedUgly = this.props.ugly.map(ugly => <Why key={ugly._id} ugly = {ugly} />)
             return(

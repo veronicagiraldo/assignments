@@ -29,13 +29,18 @@ class GlobalProvider extends Component {
 // put
     editBounty = (id, updatedBounty) => {
         axios.put(`/bounty/${id}`).then(res => {
-            // this.setState(prevState => {(
-            //     // bounties: prevState.bounties.map(bounties => bounties._id === id ? bounties = updatedBounty: bounties)
-            // )})
+            this.setState(prevState => {(
+                prevState.bounties.map(bounties => bounties._id === id ? bounties = updatedBounty: bounties)
+            )})
         })
     }
-
-
+    // editUgly = (id, updatedUgly) => {
+    //     axios.put(`https://api.vschool.io/uglyveronica/todo/${id}`).then(res => { 
+    //         this.setState(prevState =>({
+    //             ugly: prevState.ugly.map(ugly => ugly._id === id ? ugly = updatedUgly : ugly)
+    //         }))
+    //     })
+    // }
 // Delete 
     deleteBounty = (id) => {
         axios.delete(`/bounty/${id}`).then ( res => {
@@ -44,11 +49,6 @@ class GlobalProvider extends Component {
             )})
         })
     }
-
-    // componentDidMount(){
-    //     // console.log("hello")
-    //     this.getBounty();
-    // }
     render(){
         return(
             <Provider value ={{

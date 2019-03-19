@@ -261,9 +261,7 @@ li{
     .download > p:last-child{
         display: none;
     }
-
 }
-
 @media (min-width: 1130px){
     body{
         font-size: 100%;

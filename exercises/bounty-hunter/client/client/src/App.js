@@ -1,25 +1,25 @@
 import React from 'react';
 import {withGlobal} from './GlobalProvider';
 import Form from './Form';
+import DisplayJedi from './DisplayJedi';
 
-const App = (props) => {
-  console.log(1111,props)
-  let mappedBounties = props.bounties.map(bounty => {
-    return (
-      <div key={bounty._id}>
-        <h1>{bounty.firstName}</h1>
-        <img src={bounty.image} alt=""/>
-      </div>
-    )
-  })
+const App = () => {
+  // console.log(1111,props)
+  // let mappedBounties = props.bounties.map(bounty => {
+  //   return (
+  //     <div key={bounty._id}>
+  //       <h1>{bounty.firstName}</h1>
+  //       <img src={bounty.image} alt=""/>
+  //     </div>
+  //   )
+  // })
+
     return (
       <div>
-        
       <Form />
-      {mappedBounties}
+        <DisplayJedi />
       </div>
     );
 }
-
   
 export default withGlobal(App);

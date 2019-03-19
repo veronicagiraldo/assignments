@@ -2,32 +2,41 @@ import React, { Component} from 'react';
 import { withGlobal } from './GlobalProvider';
 
 class Form extends Component{
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
       firstName: '',
       lastName: '',
       isJedi: '',
-      bountyAmount: ''
+      living: '',
+      bountyAmount: '',
+      image: '',
     }
   }
+ 
   componentDidMount(){
-        console.log(this.props)
+        // console.log(this.props)
         this.props.getBounty();
-    }
+
+
+
+  }
   handleChange = e => {
     // console.log(e.target)
     this.setState({[e.target.name]: e.target.value})
   }
-  handleSubmit = e =>{
-    console.log(this.state)
+  handleSubmit = e => {
+    // console.log(this.state) 
     e.preventDefault()
     this.props.postBounty(this.state)
   }
 
   render(){
     return(
-      <div>
+      <div> 
+         { this.state.bounties.map(bounties => <h1>{bounties.title}</h1>) }
+         
+
         <form onSubmit={this.handleSubmit}>
           <input type = "text"
                   placeholder = "first name"
@@ -42,11 +51,29 @@ class Form extends Component{
                   onChange = {this.handleChange} 
                   /> 
           <input  type = "number"
-                  placeholder = "bountyAmount"
+                  placeholder = "Bounty Amount"
                   name = "bountyAmount"
                   value = {this.state.bountyAmount}
                   onChange = {this.handleChange} 
                   /> 
+          <input  type = "text"
+                  placeholder = "is Jedi"
+                  name ="isJedi"
+                  value = {this.state.isJedi}
+                  onChange = {this.handleChange}
+                  />
+          <input  type = "boolean"
+                  placeholder = "living"
+                  name ="living"
+                  value = {this.state.living}
+                  onChange = {this.handleChange}
+                  />
+          <input  type = "text"
+                  placeholder = "image"
+                  name= "image"
+                  value= {this.state.image}
+                  onChange = {this.handleChange}
+                  />
           <button>Submit</button>
         </form>
       </div>
