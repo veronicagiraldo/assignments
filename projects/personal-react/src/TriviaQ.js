@@ -10,7 +10,6 @@ class TriviaQ extends React.Component{
             difficulty: "",
             question: "",
             type: "",
-
         }
     }
     componentDidMount(){

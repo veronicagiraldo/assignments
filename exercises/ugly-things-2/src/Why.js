@@ -1,6 +1,6 @@
 import React from 'react';
 import {withThings} from './Things';
-import Form from './Form';
+// import Form from './Form';
 
 class Why extends React.Component{
     constructor(){

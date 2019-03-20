@@ -2,25 +2,17 @@ import React, { Component} from 'react';
 import { withGlobal } from './GlobalProvider';
 
 class Form extends Component{
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state = {
       firstName: '',
       lastName: '',
       isJedi: '',
-      living: '',
       bountyAmount: '',
       image: '',
     }
   }
  
-  componentDidMount(){
-        // console.log(this.props)
-        this.props.getBounty();
-
-
-
-  }
   handleChange = e => {
     // console.log(e.target)
     this.setState({[e.target.name]: e.target.value})
@@ -32,10 +24,10 @@ class Form extends Component{
   }
 
   render(){
+    // console.log(this.state)
     return(
       <div> 
-         { this.state.bounties.map(bounties => <h1>{bounties.title}</h1>) }
-         
+         <h1>Create new bounty</h1>
 
         <form onSubmit={this.handleSubmit}>
           <input type = "text"
@@ -62,12 +54,12 @@ class Form extends Component{
                   value = {this.state.isJedi}
                   onChange = {this.handleChange}
                   />
-          <input  type = "boolean"
+          {/* <input  type = "boolean"
                   placeholder = "living"
                   name ="living"
                   value = {this.state.living}
                   onChange = {this.handleChange}
-                  />
+                  /> */}
           <input  type = "text"
                   placeholder = "image"
                   name= "image"

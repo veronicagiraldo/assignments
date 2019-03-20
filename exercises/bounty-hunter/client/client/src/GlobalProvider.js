@@ -11,6 +11,7 @@ class GlobalProvider extends Component {
     }
 // Get 
     getBounty = () => {
+        // console.log("hello")
         axios.get('/bounty').then(res => {
             // console.log(res.data)
             this.setState({
@@ -18,42 +19,39 @@ class GlobalProvider extends Component {
             })
         })
     }
-// Post 
+// Post -this must match the server schema
     postBounty = newBounty => {
+        // console.log(this.state)
         axios.post('/bounty', newBounty).then(res => {
             this.setState(prevState => ({
-                bounties: [...prevState.bounties, res.data]
+                bounties: [...prevState.bounties, newBounty]
             }))
         })
     }
 // put
-    editBounty = (id, updatedBounty) => {
-        axios.put(`/bounty/${id}`).then(res => {
-            this.setState(prevState => {(
-                prevState.bounties.map(bounties => bounties._id === id ? bounties = updatedBounty: bounties)
-            )})
+    editBounty = (_id, updatedBounty) => {
+        axios.put(`/bounty/${_id}`, updatedBounty).then(res => {
+            this.setState(prevState => ({
+                bounties: prevState.bounties.map(bounty => bounty._id === _id ? bounty = res.data : bounty)
+            }))
+            .catch(err => console.log(err))
         })
     }
-    // editUgly = (id, updatedUgly) => {
-    //     axios.put(`https://api.vschool.io/uglyveronica/todo/${id}`).then(res => { 
-    //         this.setState(prevState =>({
-    //             ugly: prevState.ugly.map(ugly => ugly._id === id ? ugly = updatedUgly : ugly)
-    //         }))
-    //     })
-    // }
 // Delete 
     deleteBounty = (id) => {
         axios.delete(`/bounty/${id}`).then ( res => {
-            this.setState(prevState => {(
-                prevState.bounties.filter(bounties => bounties._id !==id)
-            )})
+            this.setState(prevState => ({
+                bounties: prevState.bounties.filter(bounty => bounty._id !==id)
+            }))
         })
     }
+
     render(){
         return(
             <Provider value ={{
                 getBounty: this.getBounty,
                 postBounty: this.postBounty,
+                editBounty: this.editBounty,
                 deleteBounty: this.deleteBounty,
                 ...this.state
             }}>

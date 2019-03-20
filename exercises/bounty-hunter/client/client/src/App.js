@@ -3,6 +3,7 @@ import {withGlobal} from './GlobalProvider';
 import Form from './Form';
 import DisplayJedi from './DisplayJedi';
 
+
 const App = () => {
   // console.log(1111,props)
   // let mappedBounties = props.bounties.map(bounty => {
@@ -16,8 +17,9 @@ const App = () => {
 
     return (
       <div>
-      <Form />
+        <Form />
         <DisplayJedi />
+       
       </div>
     );
 }

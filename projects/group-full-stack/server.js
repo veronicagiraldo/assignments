@@ -1,21 +1,16 @@
 //Note app is what the express() method is returning
 //This gives us access to the express library
-
 const express = require('express')
 const app = express()
 
-
 const mongoose = express('mongoose')
 //middleware that helps handle changes with your MongoDB from your server
-
 app.use(express.json())
 //Middleware that converts all incoming and outgoing objects into and from JSON
-
 //Note there are other formats for sending and recieving information through the web. 
 // We will be using JSON 
-
 mongoose.connect('mongodb://localhost:27017/group-full-stack', {useNewUrlParser: true}, () => {
-    console.log('Connected to the database')
+    console.log('Connected to database')
 })
     .catch(err => console.error(err)) 
 //mongoose's connect method takes up to three arguments. 

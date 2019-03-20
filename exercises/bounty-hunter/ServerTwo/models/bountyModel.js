@@ -12,7 +12,7 @@ const bountySchema = new Schema({
     bountyAmount : Number,
     image: {
       type: String, 
-      default: 'http://www.catster.com/wp-content/uploads/2017/12/A-gray-kitten-meowing.jpg'
+      default: ''
     }
 })
 

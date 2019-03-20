@@ -1,34 +1,32 @@
 import React, {Component} from 'react';
 import {withGlobal} from './GlobalProvider';
-
+import BountyItem from './BountyItem'; 
 
 class DisplayJedi extends Component {
-    constructor(props){
-      super(props)
-
-    }
-      componentDidMount(){
+    componentDidMount(){
         // console.log(this.props)
         this.props.getBounty()
       }
 
   render(){
-        let mappedBounties = this.props.bounties.map(bounty => {
-          // console.log(235745,this.props)
+        const mappedBounties = this.props.bounties.map((bounty, i) => {
+          // console.log(1111,mappedBounties)
+          return(
+            <BountyItem key ={i} bounty={bounty} 
+            />
+          )
+        })     
      return (
-       <div>
-         <div className="bountyInfo">
-         <div key={this.props._id}>
-              <h1>{this.props.firstName}</h1>
-              <img src={this.props.images} alt= ""/>
-            
-            </div>
-         </div>
+         <div className="displayJedi">
+         {/* <img src={this.props.image} alt=""/>
+         <h3>{this.props.firstName}</h3>
+         <h3>{this.props.lastName}</h3> */}
+         {/* </div> */}
+
+       
           {mappedBounties}
-       </div>
+        </div>
       )
-   })
   }
 }
-
 export default withGlobal(DisplayJedi)
