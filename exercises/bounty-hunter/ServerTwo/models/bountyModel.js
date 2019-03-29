@@ -13,8 +13,14 @@ const bountySchema = new Schema({
     image: {
       type: String, 
       default: ''
+    },
+    // a new user todo- example
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true
     }
-})
+});
 
 module.exports = mongoose.model('Bounty', bountySchema)
 // model method of mongoose takes two arguments

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withGlobal} from './GlobalProvider';
 import BountyItem from './BountyItem'; 
 
+// handleChange and handleSubmit
 class DisplayJedi extends Component {
     componentDidMount(){
         // console.log(this.props)
