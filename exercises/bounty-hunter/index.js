@@ -30,9 +30,6 @@ app.use((err, req, res, next) => {
     }
     return res.send({ message: err.message });
 });
-   
-
-
 app.listen(PORT, () => {
     console.log(`i am loading ....${PORT}`)
 })
