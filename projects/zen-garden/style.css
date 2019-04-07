@@ -217,46 +217,24 @@ p{
     text-align: center;
     font-style: italic;
     font-size: 2em;
-
-    /* width: auto;
-    padding: 1em 12%;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.4);
-    background: #3e5d67;
-    background-attachment: fixed, fixed, fixed, scroll;
-    background-image: url(contours.png), url(gridlines.png), url(noise.png), url(koi.jpg);
-    background-position: 0 0, -5px -25px, 0 0, 0 50%;
-    background-repeat: repeat, repeat, repeat, no-repeat;
-    background-size: auto, auto, auto, cover;
-    font-size: 2em;
-    font-style: italic;
-    text-align: center; */
 }
 #footer-2{
-    display: flex;
     background-color:#134347;
-    text-align: center;
     color:rgba(255, 255, 255, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'verdemoderna.woff';
     font-size: 40px;
-    padding: 3em 10%;
-    padding-top: 3em;
-    padding-right: 10%;
-    padding-bottom: 3em;
-    padding-left: 10%;
+    padding-top: 48px;
+    padding-left: 0px;
+    padding-bottom: 48px;
+    text-align: center;
+}
+.nav {
+    /* text-align: center; */
 }
 a{
+    /* text-align: center; */
     transition: all 0.25s ease-out;
 }
-/* #links{
-    font-size: 1.2em;
-    font-style: normal;
-    text-transform: uppercase;
-    font-family: 'juliussanstone';
-} */
 .LinkTitle{
     font-size: 1.2em;
     font-style: normal;
@@ -270,29 +248,20 @@ a{
     font-style: normal;
 }
 #links{
-    display: flex;
-    justify-content: left;
     background: #edf4f0;
 }
-
 ul{
     overflow:hidden;
     padding: 0 0 0 0px;
-    /* border-top: 1px solid; */
 }
 li{
-    color: #c0cac3;
-}
-#links li{
     float: left;
     width: 50%;
     list-style: none;
     border-top: solid 1px #d9e3dc;
-    padding: 1em 5%;
+    padding: 1.5em 10%;
 }
 #links-2{
-    display: flex;
-    justify-content: left;
     background-color: rgba(138,188,159,0.5);
     background-image:url(images/bamboo.png);
     font-size: 1.2em;
@@ -303,12 +272,11 @@ li{
     list-style: none;
     color: #607476;
     font-family: 'juliussanstone';
-    /* border-top: solid 1px #a0b9ad; */
+    border-top: solid 1px #a0b9ad;
     border-bottom:solid 1px #a0b9ad;
     font-style: normal;
-    padding: 1em 5%;
+    padding: 1.5em 10%;
 }
-
 .words{
     margin: 0 60px 20px 60px;
 }
@@ -343,13 +311,30 @@ li{
         padding-right: 0px;
         z-index: 1;
     } */
+@media only screen and (max-width: 500px){
+    h1{
+        margin: 0;
+    }
+    #links, li{
+        padding: 1em 5%;
+        font-size: 1.2em;
+    }
+}
 
-
-
-
+@media only screen and (max-width: 1150px) and (min-width: 500px){
+    .footer-2{
+        padding: 3em 0;
+    }
+   /* #links-2, li{
+       font-size: 1.2em;
+   } */
+}
 @media only screen and (max-width: 600px){
     .download > p:last-child{
         display: none;
+    }
+    h1{
+        font-size: 2.5em;
     }
 }
 @media (min-width: 1130px){
@@ -376,13 +361,6 @@ li{
     }
     #subheader{
         grid-area: 'shdr';
-        /* position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 310px;
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 66%,rgba(33,84,95,0.3) 66%,rgba(33,84,95,0) 100%); */
     }
     #article-1{
         grid-area: a1;
@@ -437,9 +415,11 @@ li{
     }
 }
 @media only screen and (min-width: 1132px){
+    body{
+        font-size: 100%;
+    }
     #view{
         background: rgba(255,255,255,0.1);
-       
     }
     #subheader, #view{
         margin: 0;
@@ -448,21 +428,4 @@ li{
         margin-bottom: 0px;
         margin-left: 0px;
     }
-    #footer-1{
-        padding-bottom: 3em;
-        padding-top: 3em;
-        box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3);
-    }
 }
-/* @media only screen and (min-width: 1132px){
-    #subheader{
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 310px;
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 66%,rgba(33,84,95,0.3) 66%,rgba(33,84,95,0) 100%);
-  
-    } */
-  
