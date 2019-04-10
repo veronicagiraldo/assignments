@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom';
-import Navbar from './Navbar';
+import Nav from './Nav';
 import Home from './Home';
 import Foot from './Foot';
 import Resume from './Resume';
 import Projects from './Projects';
 import About from './About';
+import MediaCard from './MediaCard';
 
 class App extends Component {
   render() {
     return (
       <div>
         <Home />
-          {/* <Navbar />  */}
+        {/* <About/> */}
+        {/* <Projects/> */}
+        {/* <Resume /> */}
+        {/* <MediaCard /> */}
+          <Nav /> 
           <Switch>
             <Route path = '/' Component={Home}/> 
             <Route path = '/about' component={About}/>

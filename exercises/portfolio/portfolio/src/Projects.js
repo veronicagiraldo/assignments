@@ -1,13 +1,16 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
-class Projects extends React.Component{
+function Projects (){
 
-  render(){
+
     return(
-      <div className="ProjectsContainer">
+      <Button variant="contained" color="primary">
+        Projects
+      </Button>
 
-      </div>
+      
     )
-  }
+  
 }
 export default Projects;
