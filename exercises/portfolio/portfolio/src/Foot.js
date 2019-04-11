@@ -1,9 +1,9 @@
 import React from 'react';
 // import {Footer} from 'react-materialize';
 import './foot.css';
-import vg from './images/vg.svg';
+// import vg from './images/vg.svg';
 import vg2 from './images/vg2.svg'
-import logo from '/Users/veronicagiraldo/dev/assignments/exercises/portfolio/portfolio/src/images/VG.png'
+// import logo from '/Users/veronicagiraldo/dev/assignments/exercises/portfolio/portfolio/src/images/VG.png'
 
 const Foot = () => {
   return(

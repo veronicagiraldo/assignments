@@ -56,11 +56,12 @@ h2{
 .topnav .icon{
     display: none;
 }
-div.background {
-    /* border: 3px solid black; */
-  }
+.background {
+    position: relative;
+}
   
-  div.transbox {
+.transbox {
+    /* position: absolute; */
     margin: 30px;
     background-color: #ffffff;
     border: 3px solid black;

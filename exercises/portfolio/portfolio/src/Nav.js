@@ -18,9 +18,9 @@ const Nav = () => {
             <ul class="center">
             {/* <ul id="nav-mobile" class="left hide-on-med-and-down"> */}
               {/* <Link to="/about">About me</Link> */}
-              <li><a href="portfolio/src/About.js">About Me</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/resume">Resume</a></li>
+              <li><Link to="/about">About Me</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/resume">Resume</Link></li>
             </ul>
 
     </Navbar>
