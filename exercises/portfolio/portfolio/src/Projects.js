@@ -20,8 +20,9 @@ function Projects (){
       // <Button variant="contained" color="primary">
       //   Projects
       // </Button>
-      <div className="projects">
+      <div className="projects">Projects
         <h6 className="projectTitle">Vegan:Eats!</h6>
+        <a href="http://veganeats.surge.sh/">Vegan:Eats! website</a>
         <p>Created a website for vegetarians and vegans to dine out at local restarurants and grocery stores in downtown Salt Lake City, UT.</p>
         <p>Used React to create the front-end, and Google Maps is integrated to the application. </p>
         <img className="pic"src={veganEats} alt="veganeats"/>
