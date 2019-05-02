@@ -1,12 +1,17 @@
 import React from 'react';
+import {useToggle} from "../Shared/hooks";
 
 
-class Dashboard extends React.Component{
-  render(){
-    return(
-      <div></div>
-    )
-  }
+const Dashboard = () => {
+
+  const {toggle, toggler} = useToggle(true)
+
+  return(
+    <div>
+     <h1>The toggle is {toggle ? "on" : "off"}</h1> 
+     <button onClick={toggler}>Toggle</button>
+    </div>
+  )
 }
 
 export default Dashboard; 

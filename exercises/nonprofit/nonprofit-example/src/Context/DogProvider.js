@@ -1,35 +1,25 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+
 export const DogContext = React.createContext()
 
 const DogProvider = (props) => {
-  const initialState = {
-    dogs: [],
-    breeds: [],
-  }
-  const [dogState, setDogState] = useState(initialState)
-//  dog pictures
-  const getDogs = () => {
+  const initialState = []
+  const [characters, setCharacters] = useState(initialState)
+
+//  get characters
+  const getCharacters = () => {
     console.log("hi")
-    axios.get('https://dog.ceo/api/breeds/image/random').then(res => {
-      const {message} = res.data
-      setDogState({
-        ...dogState,
-        dogs:{message}})
-    })  
-  }
-  // breed of dogs
-  const getBreed = () => {
-    axios.get('https://dog.ceo/api/breeds/list/all').then(res => {
-      const {message} = res.data
-      setDogState({
-        ...dogState,
-        breeds:{message}})
-    })
-  }
+    axios.get('https://rickandmortyapi.com/api/character')
+      .then(res => setCharacters(res.data.results))
+      .catch(err => console.log(err))
+   }
+// 
+  
+  
   return(
     <DogContext.Provider
-      value={{...dogState, getDogs, getBreed}}>
+      value={{ characters, getCharacters}}>
       {props.children}
     </DogContext.Provider>
   )
