@@ -1,0 +1,17 @@
+.inner{
+  width: 200px;
+  height: 400px;
+  background-color: white;
+
+}
+.container{
+  display: block;
+  width: 600px;
+  height: 400px;
+  background-color: red;
+}
+.box{
+  width: 100px;
+  height: 400px;
+  background-color: blue;
+}
