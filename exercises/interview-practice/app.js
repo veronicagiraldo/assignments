@@ -269,3 +269,15 @@ function addition(num) {
 function isEmpty(s) {
 	return s.length == 0;
 }
+// Write a function that returns true if k^k == n for input (n, k).
+// Math.pow(base, exponent)
+function kToK(n, k) {
+	return Math.pow(k,k) === n;
+}
+// Given two strings, firstName and lastName, return a single string in the format "last, first".
+function concatName(firstName, lastName) {
+  firstName.concat(' ', lastName)
+} return concatName
+// Create a function that takes a name and returns a greeting. Don't use a normal function but use an 'Arrow Function'.
+const helloName = name => "Hello " + name + "!"
+// Create a function to concatenate two integer arrays.
