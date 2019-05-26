@@ -281,3 +281,37 @@ function concatName(firstName, lastName) {
 // Create a function that takes a name and returns a greeting. Don't use a normal function but use an 'Arrow Function'.
 const helloName = name => "Hello " + name + "!"
 // Create a function to concatenate two integer arrays.
+// Create a function that takes in a word and determines whether or not it is plural. A plural word is one that ends in "s".
+function isPlural(word) {
+	return word.endsWith("s")
+}
+// Create a function that returns the ASCII value of the passed in character.
+function ctoa(c) {
+  return	c.charCodeAt(ctoa)
+  }
+
+  // Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having 
+  // an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to 
+  // largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues 
+  // to be able to accomplish that. Help him figure out the minimum number of additional statues needed.
+  function makeArrayConsecutive2(statues) {
+    return Math.max(...statues) - Math.min(...statues)- statues.length + 1;
+ }
+// Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by 
+// removing no more than one element from the array.
+ function almostIncreasingSequence(sequence) {
+  var count = 0;
+  
+  for(var i = 0; i < sequence.length; i++) {
+      if(sequence[i] <= sequence[i-1]) {
+          count++;
+          
+          if(sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1]) return false;
+          
+      }
+  }
+  
+  return count <= 1;
+}
+ 
+
