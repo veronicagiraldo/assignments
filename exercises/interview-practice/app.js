@@ -313,5 +313,35 @@ function ctoa(c) {
   
   return count <= 1;
 }
- 
 
+// Given matrix, a rectangular matrix of integers, where each 
+// value represents the cost of the room, your task is to 
+// return the total sum of all rooms that are suitable for the 
+// CodeBots (ie: add up all the values that don't appear below a 0).
+function matrixElementsSum(matrix) {
+  var total = 0;
+  
+  // Navigate each column of rooms
+  // i = current column, j = current floor in column
+  for (var i = 0; i < matrix[0].length; i++) {
+          
+      for (var j = 0; j < matrix.length; j++) {
+          if (matrix[j][i] === 0) {
+              // This room is haunted, so we don't care about the rooms below it. 
+              // Continue to the next column of rooms
+              break;
+          }
+          total += matrix[j][i];
+      }
+      
+  }
+}
+function matrixElementsSum(matrix) {
+  for(var r=0,j=0;j<matrix[0].length;j++){
+      for(var i=0;i<matrix.length;i++){
+        if(matrix[i][j]===0) break
+        else r+=matrix[i][j]
+      }
+  }
+  return r
+}
