@@ -345,3 +345,136 @@ function matrixElementsSum(matrix) {
   }
   return r
 }
+
+// Given an array of strings, return another array 
+// containing all of its longest strings.
+function allLongestStrings(inputArray) {
+      let max = inputArray[0].length;
+    inputArray.map(v => max = Math.max(max, v.length));
+    result = inputArray.filter(v => v.length == max);
+    return result;
+}
+function commonCharacterCount(s1, s2) {
+  var count = 0;
+  s1= s1.split('');
+  s2= s2.split('');
+  
+  s1.forEach(e => {
+      if(s2.includes(e)){
+          count++;
+          s2.splice(s2.indexOf(e), 1);
+      }
+  });
+return count;
+}
+console.log(commonCharacterCount("aabcc", "adcaa"))
+
+function isLucky(n) {
+  const arr = String(n).split('');
+  
+  const firstHalf= sum(arr.slice(0, arr.length /2));
+  const secondHalf = sum(arr.slice(arr.length/2));
+  
+  return firstHalf === secondHalf;
+ }
+ 
+ function sum(arr){
+  return arr.reduce((prev, current) => {
+   const _current = parseInt(current, 0);
+   return prev += _current
+  },0)
+ }
+
+ function sortByHeight(a) {
+  var array2 = a;
+  
+  array2 = array2.filter((element) => {
+   if(element !=-1){
+    return element;
+   }
+  }).sort((a, b) =>{
+   return a-b;
+  });
+  var indexVal =0;
+   for(var i=0; i <a.length; i++){
+    if(a[i] != -1){
+     a[i] =array2[indexVal];
+     indexVal++;
+    }
+   }
+  return a
+ }
+ 
+// Write an efficient function that takes
+//  stockPrices and returns the best profit I could 
+// have made from one purchase and one sale of one 
+// share of Apple stock yesterday. 
+
+const stockPrices = [10, 7, 5, 8, 11, 9];
+
+getMaxProfit(stockPrices);
+// Returns 6 (buying for $5 and selling for $11)
+
+function getMaxProfit(stockPrices) {
+  let maxProfit = 0;
+  // Go through every time
+  for (let outerTime = 0; outerTime < stockPrices.length; outerTime++) {
+    // For each time, go through every other time
+    for (let innerTime = 0; innerTime < stockPrices.length; innerTime++) {
+      // For each pair, find the earlier and later times
+      const earlierTime = Math.min(outerTime, innerTime);
+      const laterTime = Math.max(outerTime, innerTime);
+      // And use those to find the earlier and later prices
+      const earlierPrice = stockPrices[earlierTime];
+      const laterPrice = stockPrices[laterTime];
+      // See what our profit would be if we bought at the
+      // min price and sold at the current price
+      const potentialProfit = laterPrice - earlierPrice
+      // Update maxProfit if we can do better
+      maxProfit = Math.max(maxProfit, potentialProfit);
+    }
+  }
+  return maxProfit;
+}
+function getMaxProfit(stockPrices) {
+  let minPrice = stockPrices[0];
+  let maxProfit = 0;
+  for (let i = 0; i < stockPrices.length; i++) {
+    const currentPrice = stockPrices[i];
+    // Ensure minPrice is the lowest price we've seen so far
+    minPrice = Math.min(minPrice, currentPrice);
+    // See what our profit would be if we bought at the
+    // min price and sold at the current price
+    const potentialProfit = currentPrice - minPrice;
+    // Update maxProfit if we can do better
+    maxProfit = Math.max(maxProfit, potentialProfit);
+  }
+  return maxProfit;
+}
+function getMaxProfit(stockPrices) {
+  if (stockPrices.length < 2) {
+    throw new Error('Getting a profit requires at least 2 prices');
+  }
+  // We'll greedily update minPrice and maxProfit, so we initialize
+  // them to the first price and the first possible profit
+  let minPrice = stockPrices[0];
+  let maxProfit = stockPrices[1] - stockPrices[0];
+  // Start at the second (index 1) time
+  // We can't sell at the first time, since we must buy first,
+  // and we can't buy and sell at the same time!
+  // If we started at index 0, we'd try to buy *and* sell at time 0.
+  // this would give a profit of 0, which is a problem if our
+  // maxProfit is supposed to be *negative*--we'd return 0.
+  for (let i = 1; i < stockPrices.length; i++) {
+    const currentPrice = stockPrices[i];
+    // See what our profit would be if we bought at the
+    // min price and sold at the current price
+    const potentialProfit = currentPrice - minPrice;
+    // Update maxProfit if we can do better
+    maxProfit = Math.max(maxProfit, potentialProfit);
+    // Update minPrice so it's always
+    // the lowest price we've seen so far
+    minPrice = Math.min(minPrice, currentPrice);
+  }
+  return maxProfit;
+}
