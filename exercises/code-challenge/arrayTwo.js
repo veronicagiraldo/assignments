@@ -43,3 +43,17 @@ var maxDepth = function(root) {
   }
    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 };
+
+// Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+var merge = function (nums1, m, nums2, n) {
+  var len = m + n;
+  m--;
+  n--;
+  while (len--) {
+      if (n < 0 || nums1[m] > nums2[n]) {
+          nums1[len] = nums1[m--];
+      } else {
+          nums1[len] = nums2[n--];
+      }
+  }
+};
