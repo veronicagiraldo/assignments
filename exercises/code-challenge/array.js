@@ -30,19 +30,20 @@ while(count <3){
 }
 // blackjack
 
-// let suits =['heart', 'clubs', 'diamonds', 'spades'];
-// let values=['ace', 'king','queen','jack','ten','nine'];
-// let deck =[];
+let suits =['heart', 'clubs', 'diamonds', 'spades'];
+let values=['ace', 'king','queen','jack','ten','nine'];
+let deck =[];
 
-// for(let suitIdx=0; suitIdx < suits.length; suitIdx++){
-//     for(let valueIdx =0; valueIdx < values.length; valueIdx++){
-//         deck.push(values[valueIdx]+ ' of '+ suits[suitIdx]);
-//     }
-// }
-// for(let i = 0; i < deck.length; i++){
-//     console.log(deck[i])
-// }
-// let playerCards= [deck[0], deck[2]];
+for(let suitIdx=0; suitIdx < suits.length; suitIdx++){
+    for(let valueIdx =0; valueIdx < values.length; valueIdx++){
+        deck.push(values[valueIdx]+ ' of '+ suits[suitIdx]);
+    }
+}
+for(let i = 0; i < deck.length; i++){
+    console.log(deck[i])
+}
+
+let playerCards= [deck[0], deck[2]];
 
 function showMessage(){
     console.log('hello')
