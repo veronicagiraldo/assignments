@@ -1,6 +1,4 @@
 // // // without mongoose 
-
-
 // const express = require('express')
 // // const bountyRoutes = express.Router()
 // // const uuid = require('uuid')
