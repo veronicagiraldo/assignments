@@ -1,10 +1,12 @@
 import React from 'react';
 
 class Weather extends React.Component{
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state={
-      weather: [],
+      // weather: [],
+      items: [],
+      isLoaded: false,
       // zipCode: '',
     }
   }
@@ -20,6 +22,7 @@ class Weather extends React.Component{
         this.setState ({ weather: response})
       })
   }
+
   // getZip = () => {
   //   fetch(`api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}`)
   //   .then(response => response.json())  

@@ -1,43 +1,36 @@
 import React from 'react';
+import People from './People';
 
 class State extends React.Component{
   constructor(){
     super()
     this.state={
-      people: [],
-      name: '',
-      isLoading: false,
+      people: [], //store api request
     }
   }
   componentDidMount(){
-    this.getNames();
-    this.setState({ isLoading: true});
+    fetch('https://swapi.co/api/people/')
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({people: data})
+      })
+      // .catch(console.log)
   }
   
-  getNames = () => {
-    fetch("https://swapi.co/api/people/")
-    .then(response => response.json())
-    .then(response => {
-      console.log(response)
-      this.setState({
-        people: response,
-        isLoading: false,
-        // name: results.data,
-        })
-      })
-      // .catch()
-  }
+  // getNames = () => {
+  //   fetch("https://swapi.co/api/people/")
+  //   .then(res => res.json())
+  //   .then((data) => {
+  //     this.setState({people: data})
+  //     })
+  //     .catch(console.log)
+  // }
+ 
 
   render(){
-    const {people, isLoading} = this.state;
-    if(isLoading){
-      return<p><i class="fas fa-meh"></i>Loading...</p>
-    }
     return(
-      <div>
-      {people}
      
-      </div>
+      <People people={this.state.people}/>
     )
   }
 
