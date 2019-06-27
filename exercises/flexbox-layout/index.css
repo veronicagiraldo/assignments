@@ -1,0 +1,62 @@
+
+/* .container >div {
+  flex: 1;
+
+  /* flex-grow, flex-shrink, flex-basis */
+/* .home{
+  margin-right: auto;
+} */
+/* flex box- left to right (horizontal) */
+/* flex-direction: automatically does row. where it begins */
+/* row, column, row-reverse, column-reverse */
+/* justify-content: (along axis) flex-start, flex-end, center, space-around, space-between (no space on the outer margin), space-evenly(space evenly between elements); */
+/* flex: 1 better than num% for measuring the screen works well  */
+/* align-items: center, stretch, flex-start, flex-end,   */
+/* height: 100%; always change the body/html to 100% as well
+align-items: center;
+justify-content: center;  // make the content center of the page  */
+/* flex-wrap: nowrap / wrap */
+/* flex-grow(1)/flex-shrink(1)/flex-basis(200px)/  */
+/* .container {
+  border: 5px solid #ffcc5c;
+  display: flex; 
+  height: 100%;
+  align-items: center;
+}
+.logout{
+  align-self: flex-end;
+}
+.home{
+  align-self: flex-end;
+} */
+/* .container {
+  border: 5px solid #ffcc5c;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: flex-end;
+} */
+/* 
+.home{ 
+  flex: 1 1 200px; 
+ flex-grow: 0; 
+ flex-shrink: 1; 
+ flex-basis: 200px;
+}
+.logout{
+  flex: 1 1 200px;
+  flex-grow: 0;
+  flex-shrink: 1; 
+  flex-basis: 200px;
+} */
+
+/* .home{
+  order:1
+}
+.search{
+  order: -1;
+}
+.logout{
+  order: -2;
+} */
