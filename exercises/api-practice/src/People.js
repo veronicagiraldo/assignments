@@ -1,14 +1,14 @@
-import React from 'react';
+// import React from 'react';
 
-const People = ({people}) => {
-  return(
-    <div>
-      <h1>StarWars People</h1>
-      {people.map((person) => (<h6>{person.results.name}</h6>))}
-    </div>
-  )
-};
-export default People;
+// const People = ({people}) => {
+//   return(
+//     <div>
+//       <h1>StarWars People</h1>
+//       {people.map((person) => (<h6>{person.results.name}</h6>))}
+//     </div>
+//   )
+// };
+// export default People;
 // const Contacts = ({ contacts }) => {
 //   return (
 //     <div>
