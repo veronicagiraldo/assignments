@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  line-height: 1.4;
+}
+h1{
+  font-size: 3rem;
+}
+.App {
+  text-align: center;
+}
+
