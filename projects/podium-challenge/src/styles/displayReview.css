@@ -1,0 +1,5 @@
+.displayContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
