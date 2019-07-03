@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Lodash from 'lodash';
 // import {Provider} from './index';
 
 const ThemeContext = React.createContext()
@@ -11,70 +12,70 @@ const authAxios = axios.create({
   baseURL: baseURL,
   headers: {'x-api-key': token}
 });
+// all reviews with a single button
+// save all ids from request in array in this.state.
+// allReviews: []
+// then shuffle them ()
+
+// one review on a button click and submit a post request for a get one with the ID
+// then you shuffle this.state.allShakeSpearRevies
 
 
 class ThemeProvider extends React.Component{
   constructor(){
     super()
     this.state = {
-     theme: "dark",
      reviews: [],
      isLoading: false,
+     single: [],
+     allShakespearReviews: [],
+     shuffledReviews: []
     }
-    this.toggleTheme = this.toggleTheme.bind(this)
+    // this.toggleTheme = this.toggleTheme.bind(this)
   }
-  toggleTheme(){
-    this.setState(prevState => ({
-      theme: prevState.theme === "dark" ? "light" : "dark"
-    }))
-  }
-  // Data with AuthAxios 
-  // getData = () => {
-  //   authAxios
-  //   .get(`${baseURL}/`)
-  //   .then(res => {
-  //     console.log(res.data);
-  //   })
-  //   .catch(err => {throw err} );
+  // theme-toggle
+  // toggleTheme(){
+  //   this.setState(prevState => ({
+  //     theme: prevState.theme === "dark" ? "light" : "dark"
+  //   }))
   // }
   getData = () => {
     authAxios
     .get(`${baseURL}/`)
     .then(res => {
-      console.log(res.data)
+      console.log(res.data);
       this.setState({
-        reviews:res.data,
+        reviews: res.data,
         isLoading: false,
-      })
+        allShakespearReviews: res.data
+      }, () => this.shuffleReviews())
     })
     .catch(err => {throw err})
   };
-  
+  shuffleReviews =() =>{
+    this.setState({
+      shuffledReviews: Lodash(this.state.allShakespearReviews)
+    })
+  }
 
-  // axios.get(`https://shakespeare.podium.com/api/reviews/&apikey=${API_KEY}`)
-  //         .then(res => res.json())
-  //         .then(data => {
-  //           this.setState({
-  //             reviews: data
-  //           })
-  //         })
-  //         .catch(console.log)
+  getOne =(id) => {
+    authAxios
+    .get(`${baseURL}/:${id}`)
+    .then(res =>{
+      console.log(res.data)
+      this.setState({})
+    })
+    .catch(err => {throw err});
+  }
 
   render(){
-
-    // const props = {
-    //   toggleTheme: this.toggleTheme,
-    //   ...this.state
-    // }
     return (
-    //return the theme Provider and it's children
       <ThemeContext.Provider value={{
+        getOne: this.getOne,
         getData: this.getData,
-        getReviews: this.getReviews,
         ...this.state
       }}>
         {this.props.children}
-      {/* ADD API CALLS  */}
       </ThemeContext.Provider>
     )
   }

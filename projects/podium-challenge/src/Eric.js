@@ -35,3 +35,39 @@ class App extends Component {
 
 export default App;
  
+getOne = (id) => {
+  authAxios
+  .get(`${baseURL}/${id}`)
+  .then(res => {
+    console.log(res.data);
+  })
+  .catch(err => {throw err});
+}
+
+onClick={() => this.getOne(id)} 
+
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+        allShakespearReviews: [],
+        shuffledReviews: []
+    }
+}
+
+  getData = () => {
+    authAxios
+    .get(`${baseURL}/`)
+    .then(res => {
+      console.log(res.data);
+      this.setState({allShakespearReviews: res.data})
+    }, () => this.shuffleReviews())
+    .catch(err => {throw err} );
+  }
+
+  shuffleReviews = () => {
+    this.setState({
+      shuffledReviews: Lodash(this.state.allShakespearReviews)
+    })
+  }
+
