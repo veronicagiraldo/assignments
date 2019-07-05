@@ -24,7 +24,7 @@ class App extends React.Component {
             leave={{ opacity: 0}}
             >
             {show => show && (props => (
-              <animated.div sytle={props}>
+              <animated.div style={props}>
                 <Component3 />
               </animated.div>
             ))

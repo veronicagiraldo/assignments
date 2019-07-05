@@ -1,0 +1,22 @@
+.homeContainer{
+  background: #000 url('../images/stage.jpg');
+  color: #fff;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.color-overlay{
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .7;
+  position: absolute;
+}
+h2{
+  font-family: 'Russo One', sans-serif;
+  font-size: 60px;
+  z-index: 1;
+}

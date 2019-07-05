@@ -2,7 +2,6 @@ import React from 'react'
 import{ withTheme} from '../ThemeProvider'
 import ReviewContent from '../content/ReviewContent';
 import '../styles/displayReview.css'
-// useEffect 
 
 export class DisplayReviews extends React.Component{
   componentDidMount(){
@@ -11,11 +10,9 @@ export class DisplayReviews extends React.Component{
   render(){
     this.props.reviews.map(() => <ReviewContent />)
     return (
-      <div className="displayContainer">
-        <div className="display">
+        <div className="displayContainer">
         </div>
-      </div>
-    )
+      )
   }
 }
 export default withTheme(DisplayReviews)

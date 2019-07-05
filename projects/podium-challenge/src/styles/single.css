@@ -1,0 +1,37 @@
+.singleContainer{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+}
+.display{
+  margin-top: 30px;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  justify-content: center;
+}
+.display:hover{
+  box-shadow: 0 8px 16px 0  #b00110;
+}
+.singleBody{
+  padding: 16px 16px;
+  text-align: left;
+}
+.catImage{
+  height: 200px;
+  margin-left: auto;
+  border-radius: 5px 0 0 5px;
+}
+.card-title{
+  align-self: flex-start;
+}
+.card-text{
+  padding-top: 18px;
+  font-style: italic;
+  font-size: 20px;
+}
+.card-date{
+  font-size: 14px;
+  color: gray;
+}
