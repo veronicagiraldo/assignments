@@ -1,0 +1,32 @@
+.nav {
+  background-color: gold;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+}
+.nav-logo {
+  height: 60px;
+  width: 60px;
+}
+.nav-logo:hover {
+  cursor: pointer;
+}
+.nav-content {
+  max-width: 900px;
+  padding: 0rem 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li {
+  display: inline;
+  justify-content: center; 
+  margin-left: 2rem;
+}
+.nav-logo{
+  margin-right: auto;  
+}
