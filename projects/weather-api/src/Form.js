@@ -4,8 +4,8 @@ class Form extends React.Component{
   constructor(props){
     super(props)
     this.state={
-      city: '',
-      country: '',
+      zipCode: '',
+      country: ''
     }
   }
   handleChange =(e) => {
@@ -17,7 +17,7 @@ class Form extends React.Component{
   }
   clearInputs = () => {
     this.setState({
-    city: '',
+    zipCode: '',
     country: ''
     })
   }
@@ -29,11 +29,10 @@ class Form extends React.Component{
               City:
               <input
               onChange={this.handleChange}
-              value={this.state.city}
-              type="text"
-              placeholder="city"
-              name="city"
-              // value=""
+              value={this.state.zipCode}
+              type="zipCode"
+              placeholder="zipCode"
+              name="zipCode"
                />
                Country: <input 
                onChange={this.handleChange}
